@@ -1,0 +1,24 @@
+{
+  "name": "@saas/eslint-config",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "private": true,
+  "exports": {
+    "./base": "./base.js",
+    "./next-js": "./next.js",
+    "./node": "./node.js"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@saas/prettier": "workspace:*",
+    "@types/eslint": "^9.6.1",
+    "eslint-config-turbo": "^2.4.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1"
+  },
+  "prettier": "@saas/prettier",
+  "eslintConfig": {
+    "extends": [
+      "./base.js"
+    ]
+  }
+}
