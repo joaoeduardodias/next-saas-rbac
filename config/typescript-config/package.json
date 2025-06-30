@@ -1,8 +1,11 @@
 {
-  "name": "@saas/tsconfig",
+  "name": "@sass/ts-config",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "files": [
+    "library.json"
+  ],
   "publishConfig": {
     "access": "public"
   }

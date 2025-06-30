@@ -41,6 +41,18 @@ importers:
 
   config/typescript-config: {}
 
+  packages/auth:
+    devDependencies:
+      '@saas/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@saas/prettier':
+        specifier: workspace:*
+        version: link:../../config/prettier
+      '@sass/ts-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
+
 packages:
 
   '@eslint-community/eslint-utils@4.5.0':
