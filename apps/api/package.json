@@ -3,16 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/http/server.ts"
   },
   "dependencies": {
-    "@sass/auth": "workspace:*"
+    "@fastify/cors": "^11.0.1",
+    "@prisma/client": "6.11.1",
+    "@sass/auth": "workspace:*",
+    "bcryptjs": "^3.0.2",
+    "fastify": "^5.4.0",
+    "fastify-type-provider-zod": "^5.0.1",
+    "zod": "^3.25.73"
   },
   "devDependencies": {
     "@saas/eslint-config": "workspace:*",
     "@saas/prettier": "workspace:*",
     "@sass/ts-config": "workspace:*",
+    "@types/bcryptjs": "^3.0.0",
     "@types/node": "^24.0.7",
+    "prisma": "^6.11.1",
     "tsx": "^4.20.3"
   },
   "prettier": "@sass/prettier",
