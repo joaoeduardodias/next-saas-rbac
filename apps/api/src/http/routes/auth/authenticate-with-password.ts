@@ -12,7 +12,15 @@ export async function authenticateWithPassword(app: FastifyInstance) {
       body: z.object({
         email: z.email('Invalid email'),
         password: z.string().min(6, "Password must be at least 6 characters long"),
-      })
+      }),
+      response: {
+        400: z.object({
+          message: z.string(),
+        }),
+        201: z.object({
+          token: z.string(),
+        })
+      }
     }
   }, async (request, reply) => {
 

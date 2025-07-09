@@ -13,7 +13,13 @@ export async function createAccount(app: FastifyInstance) {
           name: z.string().min(1, "Name is required"),
           email: z.email(),
           password: z.string().min(6, "Password must be at least 6 characters long"),
-        })
+        }),
+        response: {
+          400: z.object({
+            message: z.string(),
+          }),
+          201: z.number()
+        }
       }
     },
     async (request, reply) => {
@@ -23,7 +29,7 @@ export async function createAccount(app: FastifyInstance) {
       })
 
       if (userWithSameEmail) {
-        return reply.status(400).send({ error: "User with same e-mail already exists." });
+        return reply.status(400).send({ message: "User with same e-mail already exists." });
       }
 
       const [, domain] = email.split('@');
