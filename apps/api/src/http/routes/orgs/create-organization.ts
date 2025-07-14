@@ -7,7 +7,7 @@ import { z } from "zod/v4";
 import { BadRequestError } from "../_errors/bad-request-error";
 
 export async function createOrganization(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().register(auth).post('/organization', {
+  app.withTypeProvider<ZodTypeProvider>().register(auth).post('/organizations', {
     schema: {
       tags: ['Organization'],
       summary: 'Create a new organization.',

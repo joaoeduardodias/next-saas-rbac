@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 export const billingSubject = z.tuple([
   z.union([z.literal('manage'), z.literal('get'), z.literal('export')]),

@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 export const projectSchema = z.object({
   __typename: z.literal('Project').default('Project'),
