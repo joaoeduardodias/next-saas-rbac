@@ -16,14 +16,13 @@ export async function deleteProject(app: FastifyInstance) {
       security: [
         { bearerAuth: [] }
       ],
-
       params: z.object({
         slug: z.string(),
         projectId: z.uuid()
       }),
-      response: z.object({
+      response: {
         204: z.null()
-      })
+      }
     }
   }, async (request, reply) => {
     const { slug, projectId } = request.params

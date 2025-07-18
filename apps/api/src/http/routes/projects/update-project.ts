@@ -24,9 +24,9 @@ export async function updateProject(app: FastifyInstance) {
         slug: z.string(),
         projectId: z.uuid()
       }),
-      response: z.object({
+      response: {
         204: z.null()
-      })
+      }
     }
   }, async (request, reply) => {
     const { slug, projectId } = request.params
